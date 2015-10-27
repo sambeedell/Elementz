@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO" initialViewController="2">
+    <dependencies>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="rra-kR-cnj">
+                                <rect key="frame" x="0.0" y="24" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Elementz" id="MNr-6O-l58">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="aVr-s8-r32">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="jOa-RM-zDe" kind="modal" modalTransitionStyle="flipHorizontal" id="ha7-Pb-Tfu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7u-cH-9k9">
+                                <rect key="frame" x="94" y="98" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0Hz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="34p-z0-h1U">
+                                <rect key="frame" x="142" y="98" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="5y8-bg-WZP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mp-MT-paO">
+                                <rect key="frame" x="16" y="445" width="79" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Monitor">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startRecording:" destination="2" eventType="touchUpInside" id="aPf-43-ZaY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cI-a9-TOD">
+                                <rect key="frame" x="247" y="445" width="57" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="3id-aG-OEN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="2" eventType="touchUpInside" id="yg4-Sz-WyX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rra-kR-cnj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="24" id="6aB-cw-dBq"/>
+                            <constraint firstItem="4mp-MT-paO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="16" id="7Au-Dw-81a"/>
+                            <constraint firstItem="rra-kR-cnj" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="7Nr-o1-vbT"/>
+                            <constraint firstItem="q7u-cH-9k9" firstAttribute="top" secondItem="3" secondAttribute="top" constant="98" id="90F-ju-JFj"/>
+                            <constraint firstAttribute="trailing" secondItem="rra-kR-cnj" secondAttribute="trailing" type="default" id="AzL-q4-6kK"/>
+                            <constraint firstAttribute="trailing" secondItem="3cI-a9-TOD" secondAttribute="trailing" constant="16" id="ZD6-aT-W0z"/>
+                            <constraint firstItem="34p-z0-h1U" firstAttribute="baseline" secondItem="q7u-cH-9k9" secondAttribute="baseline" type="default" id="afE-QM-0qf"/>
+                            <constraint firstAttribute="bottom" secondItem="4mp-MT-paO" secondAttribute="bottom" constant="60" id="cLo-gc-IKe"/>
+                            <constraint firstItem="34p-z0-h1U" firstAttribute="leading" secondItem="q7u-cH-9k9" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="lrU-KG-q5c"/>
+                            <constraint firstItem="q7u-cH-9k9" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="94" id="uJT-Dr-AWE"/>
+                            <constraint firstItem="3cI-a9-TOD" firstAttribute="baseline" secondItem="4mp-MT-paO" secondAttribute="baseline" type="default" id="vXt-mn-7A2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="freq1" destination="34p-z0-h1U" id="fgR-SH-Vhd"/>
+                        <outlet property="recordButton" destination="4mp-MT-paO" id="0Ti-Za-Xwf"/>
+                        <outlet property="stopButton" destination="3cI-a9-TOD" id="1XS-eB-4ju"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="279"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="lIj-1o-Nyc">
+            <objects>
+                <viewController id="jOa-RM-zDe" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TFi-L1-Sny">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Ozg-Yz-OAr">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Elementz" id="NI6-W5-Hxn">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="gLh-AV-03b">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="returnToView" destination="jOa-RM-zDe" id="bhQ-kQ-pps"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUE-gf-exL">
+                                <rect key="frame" x="0.0" y="386" width="320" height="162"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30w-yT-AK0">
+                                <rect key="frame" x="0.0" y="66" width="320" height="283"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gG1-7i-80z">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <string key="text">Elementz is designed to isolate the 3 main elements used to characterise any sound; Pitch, Loudness and Timbre.
+
+Pitch is displayed at the top of the screen in Hertz
+
+Loudness is represented by the size of the dynamic circle in the centre of the screen 
+
+Timbre is depicted by the colour and line width of the circle. A bright sound make the circle white and a dull sound makes the circle black. The rougher the sound, the thicker the line width.
+
+Having independent control of each of these characteristics is guaranteed to heighten your musical performance and enable unique facets to you performance to WOW the audience.
+
+Please use the FFT Size control to change the accuracy of the pitch detection, dependant on your performance style/genre, and update the amount of samples displayed in a single cycle of the waveform.</string>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="gG1-7i-80z" secondAttribute="bottom" type="default" id="0PC-Yl-ja6"/>
+                                    <constraint firstItem="gG1-7i-80z" firstAttribute="leading" secondItem="30w-yT-AK0" secondAttribute="leading" type="default" id="27z-pG-3Jd"/>
+                                    <constraint firstAttribute="trailing" secondItem="gG1-7i-80z" secondAttribute="trailing" type="default" id="LhZ-7O-eWD"/>
+                                    <constraint firstItem="gG1-7i-80z" firstAttribute="centerX" secondItem="30w-yT-AK0" secondAttribute="centerX" type="default" id="Wbx-ib-fKv"/>
+                                    <constraint firstItem="gG1-7i-80z" firstAttribute="top" secondItem="30w-yT-AK0" secondAttribute="top" type="default" id="aVm-lf-3Mv"/>
+                                    <constraint firstItem="gG1-7i-80z" firstAttribute="centerY" secondItem="30w-yT-AK0" secondAttribute="centerY" type="default" id="hDj-mZ-8OF"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FFT Size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xur-fg-Cpe">
+                                <rect key="frame" x="36" y="429" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ozg-Yz-OAr" firstAttribute="trailing" secondItem="30w-yT-AK0" secondAttribute="trailing" type="default" id="2Gj-1i-iya"/>
+                            <constraint firstAttribute="bottom" secondItem="30w-yT-AK0" secondAttribute="bottom" constant="199" id="ETn-1V-OIS"/>
+                            <constraint firstItem="30w-yT-AK0" firstAttribute="leading" secondItem="BUE-gf-exL" secondAttribute="leading" type="default" id="LQ9-PN-6M1"/>
+                            <constraint firstItem="30w-yT-AK0" firstAttribute="leading" secondItem="Ozg-Yz-OAr" secondAttribute="leading" type="default" id="SYe-qh-Ird"/>
+                            <constraint firstAttribute="bottom" secondItem="xur-fg-Cpe" secondAttribute="bottom" constant="98" id="Tce-zr-OFz"/>
+                            <constraint firstItem="30w-yT-AK0" firstAttribute="top" secondItem="Ozg-Yz-OAr" secondAttribute="bottom" type="default" id="YGr-Jd-ahk"/>
+                            <constraint firstItem="xur-fg-Cpe" firstAttribute="leading" secondItem="TFi-L1-Sny" secondAttribute="leading" constant="36" id="ZEm-De-Rbh"/>
+                            <constraint firstItem="BUE-gf-exL" firstAttribute="leading" secondItem="TFi-L1-Sny" secondAttribute="leading" type="user" id="aOL-ni-LUd"/>
+                            <constraint firstAttribute="bottom" secondItem="BUE-gf-exL" secondAttribute="bottom" type="default" id="eJ4-vm-J80"/>
+                            <constraint firstItem="BUE-gf-exL" firstAttribute="trailing" secondItem="30w-yT-AK0" secondAttribute="trailing" type="default" id="qDl-Q9-pKN"/>
+                            <constraint firstItem="Ozg-Yz-OAr" firstAttribute="top" secondItem="TFi-L1-Sny" secondAttribute="top" constant="22" id="z9M-wC-Z9h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cB6-ap-guS"/>
+                    <connections>
+                        <outlet property="fftSizePicker" destination="BUE-gf-exL" id="pOx-6t-Rw2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64R-66-VcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="279"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+</document>
